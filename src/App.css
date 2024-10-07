@@ -1,0 +1,182 @@
+/* Body Styling */
+body {
+  background-color: #f0f4f8;
+  font-family: 'Arial', sans-serif;
+  color: #333;
+  margin: 0;
+  padding: 0;
+}
+
+/* Container Styling */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+/* Meme Card Styling */
+.meme-card {
+  width: 100%;
+  margin-bottom: 30px;
+  border: none;
+  border-radius: 12px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  background-color: #ffffff;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+/* Image in Meme Card */
+.meme-card img {
+  height: 300px;
+  width: 100%;
+  object-fit: contain;
+  padding: 10px;
+  background-color: #eaeef1;
+  transition: transform 0.3s ease;
+}
+
+/* Hover effect on Meme Card */
+.meme-card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
+}
+
+.meme-card:hover img {
+  transform: scale(1.1);
+}
+
+/* Meme Card Body */
+.meme-card .card-body {
+  padding: 20px;
+  text-align: center;
+  color: #333;
+}
+
+/* Meme Title */
+.meme-card .card-title {
+  font-size: 1.25rem;
+  margin-bottom: 15px;
+  color: #2c3e50;
+}
+
+/* Button Styling */
+.meme-card button {
+  background-color: #4a90e2;
+  border: none;
+  padding: 10px 20px;
+  font-size: 1rem;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+  color: white;
+}
+
+/* Button Hover */
+.meme-card button:hover {
+  background-color: #357ab8;
+  cursor: pointer;
+}
+
+/* Add margin between buttons */
+.meme-card button + button {
+  margin-left: 10px;
+}
+
+/* Text Editing Component */
+.text-input {
+  display: inline-block;
+  padding: 10px;
+  font-size: 1.2rem;
+  border: 2px solid #ccc;
+  border-radius: 5px;
+  transition: border-color 0.3s ease;
+}
+
+/* Focus effect for input */
+.text-input:focus {
+  border-color: #4a90e2;
+  outline: none;
+}
+
+/* Draggable Text Component */
+.draggable-text {
+  font-size: 1.5rem;
+  font-weight: bold;
+  cursor: move;
+  position: absolute;
+  color: #34495e;
+  transition: transform 0.3s ease;
+}
+
+/* Button Group Styling */
+.button-group {
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+
+/* Save Button Styling */
+.button-group .btn-save {
+  background-color: #27ae60;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+.button-group .btn-save:hover {
+  background-color: #1f8a50;
+}
+
+/* Add Text Button Styling */
+.button-group .btn-add-text {
+  background-color: #f39c12;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+.button-group .btn-add-text:hover {
+  background-color: #d9820e;
+}
+
+/* Header Styling */
+h1 {
+  font-size: 3rem;
+  text-align: center;
+  color: #2c3e50;
+  margin-bottom: 50px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+/* Utility Classes */
+.mt-5 {
+  margin-top: 50px;
+}
+
+.mb-5 {
+  margin-bottom: 50px;
+}
+
+/* Animation on load for memes */
+@keyframes fadeIn {
+  from {
+      opacity: 0;
+      transform: translateY(30px);
+  }
+  to {
+      opacity: 1;
+      transform: translateY(0);
+  }
+}
+
+/* Applying the fade-in effect */
+.meme-card {
+  animation: fadeIn 0.8s ease;
+}
